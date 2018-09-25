@@ -302,7 +302,7 @@ header .head .head_container .nav li a.current {
   text-align: center;
 }
 .cocos2d-x .cocos2d-x-container {
-  opacity: 1;
+  opacity: 0;
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
   -o-transform: translate(0px, 0px);
@@ -311,6 +311,9 @@ header .head .head_container .nav li a.current {
   width: 1160px;
   margin: 0 auto;
   padding-top: 40px;
+  transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
 }
 .cocos2d-x .cocos2d-x-container h2 {
   font-size: 30px;
@@ -364,6 +367,10 @@ header .head .head_container .nav li a.current {
   margin: 0 auto;
   text-align: center;
   display: inline-block;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  opacity: 0;
 }
 .hot-blog .hot-blog-container > a {
   display: block;

@@ -49,8 +49,24 @@ $(document).ready(function(){
             nav.style.zIndex = '-100'
         }
     }
-    $('.nav li a').on('mousemove',function(){
-        $('.nav li a').removeClass('current');
-        $(this).addClass('current');
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        new WOW().init();
+    };    
+    $(document).ready(function(){
+        var a,b,c;
+        a = $(window).height();    //浏览器窗口高度
+        var group = $(".hot-blog-container");
+        var cocos = $('.cocos2d-x-container');
+        $(window).scroll(function(){
+            b = $(this).scrollTop();   //页面滚动的高度
+            c = group.offset().top;    //元素距离文档（document）顶部的高度
+            d = cocos.offset().top;
+            if(a+b>c){
+                group.css('opacity','1'); 
+            }
+            if(a+b>d){
+                cocos.css('opacity','1'); 
+            }
+        })
     })
 })
